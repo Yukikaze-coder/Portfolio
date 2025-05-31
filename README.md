@@ -1,13 +1,13 @@
 # Animated Portfolio
 
-This is a modern, animated web portfolio designed to showcase your projects, skills, and contact information in a visually engaging way.
+This is a modern, animated web portfolio designed to showcase my projects, skills, and contact information in a visually engaging way.
 
 ## Features
 
 - **Animated Project Previews:** Hover over project videos to see them play automatically.
 - **Responsive Sidebar Navigation:** Easily toggle the sidebar menu for navigation.
 - **Contact Form:** Simple contact form with validation and mailto integration.
-- **Social Links:** Quick access to your GitHub, LinkedIn, and phone contact.
+- **Social Links:** Quick access to my GitHub, LinkedIn, and phone contact.
 - **Mobile-Friendly:** Optimized for both desktop and mobile devices.
 - **Clean, Modern Design:** Uses [Boxicons](https://boxicons.com/) for crisp, scalable icons.
 
