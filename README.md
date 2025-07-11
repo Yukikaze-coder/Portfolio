@@ -1,5 +1,7 @@
 # Animated Portfolio
 
+![alt text](thumbnail.png)
+
 This is a modern, animated web portfolio designed to showcase my projects, skills, and contact information in a visually engaging way.
 
 ## Features

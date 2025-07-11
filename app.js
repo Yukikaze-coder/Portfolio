@@ -61,6 +61,8 @@ window.addEventListener('resize', function() {
 const sideBar = document.querySelector('.sidebar');
 const menu = document.querySelector('.menu-icon');
 const closeIcon = document.querySelector('.close-icon');
+const sidebarNavLinks = document.querySelectorAll('.sidebar .nav-link, .sidebar a[href="#"]');
+
 menu.addEventListener("click", function() {
     sideBar.classList.remove("close-sidebar");
     sideBar.classList.add("open-sidebar");
@@ -70,6 +72,28 @@ closeIcon.addEventListener("click", function() {
     sideBar.classList.remove("open-sidebar");
     sideBar.classList.add("close-sidebar");
 });
+
+// Auto-close sidebar when navigation links are clicked
+sidebarNavLinks.forEach(function(link) {
+    link.addEventListener("click", function() {
+        sideBar.classList.remove("open-sidebar");
+        sideBar.classList.add("close-sidebar");
+    });
+});
+
+// Scroll down button functionality
+const scrollDownBtn = document.querySelector('.scroll-down');
+if (scrollDownBtn) {
+    scrollDownBtn.addEventListener('click', function() {
+        const aboutSection = document.getElementById('about');
+        if (aboutSection) {
+            aboutSection.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+}
 
 // Social box logic
 document.addEventListener('DOMContentLoaded', function() {

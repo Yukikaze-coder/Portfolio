@@ -234,6 +234,12 @@ header ul a:hover{
     border-radius: 50px;
     cursor: pointer;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.626);
+    transition: all 0.3s ease;
+  }
+  
+  .scroll-down:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+    transform: scale(1.1);
   }
   .scroll-down::before,
   .scroll-down::after {
@@ -987,6 +993,10 @@ header ul a:hover{
 }
 
 @media screen and (max-width: 700px){
+    .container{
+        gap: 50px;
+    }
+    
     header {
         position: fixed;
         height: 50px;
@@ -1082,7 +1092,7 @@ header ul a:hover{
     }
 
     .my-project{
-        margin-bottom: 100px;
+        margin-bottom: 50px;
     }
 
     .project-card{
@@ -1132,7 +1142,7 @@ header ul a:hover{
 
     .contact-section{
         flex-direction: column;
-        margin-top: 100px;
+        margin-top: 50px;
         margin-bottom: 50px;
     }
 
@@ -1147,7 +1157,10 @@ header ul a:hover{
 
 
 @media screen and (max-width: 480px) {
-
+    .container{
+        gap: 40px;
+    }
+    
     .hero .skills-video-box {
         display: none;
         
