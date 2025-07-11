@@ -1,29 +1,66 @@
-const video1 = document.getElementById('projectVideo1');
-const video2 = document.getElementById('projectVideo2');
-const video3 = document.getElementById('projectVideo3');
+// Get all project videos
+const projectVideos = document.querySelectorAll('.project-vidbox video');
+const hoverSigns = document.querySelectorAll('.hover-sign');
+
+// Function to detect mobile devices
+function isMobileDevice() {
+    return /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent) || 
+           (window.innerWidth <= 768);
+}
+
+// Function to setup video behavior
+function setupVideoPlayback() {
+    // Remove existing event listeners first
+    projectVideos.forEach(function(video, index) {
+        video.removeEventListener("mouseover", video.playHandler);
+        video.removeEventListener("mouseout", video.pauseHandler);
+    });
+
+    if (isMobileDevice()) {
+        // Mobile: Auto-play all project videos continuously
+        projectVideos.forEach(function(video, index) {
+            video.autoplay = true;
+            video.play();
+            // Show hover signs on mobile
+            if (hoverSigns[index]) {
+                hoverSigns[index].classList.add("active");
+            }
+        });
+    } else {
+        // Desktop: Keep hover functionality
+        projectVideos.forEach(function(video, index) {
+            // Store handlers for later removal
+            video.playHandler = function() {
+                video.play();
+                if (hoverSigns[index]) {
+                    hoverSigns[index].classList.add("active");
+                }
+            };
+            video.pauseHandler = function() {
+                video.pause();
+                if (hoverSigns[index]) {
+                    hoverSigns[index].classList.remove("active");
+                }
+            };
+            
+            video.addEventListener("mouseover", video.playHandler);
+            video.addEventListener("mouseout", video.pauseHandler);
+        });
+    }
+}
+
+// Initialize video playback
+setupVideoPlayback();
+
+// Handle window resize to switch between mobile and desktop behavior
+window.addEventListener('resize', function() {
+    setupVideoPlayback();
+});
 
 // Sidebar elements //
 const sideBar = document.querySelector('.sidebar');
 const menu = document.querySelector('.menu-icon');
 const closeIcon = document.querySelector('.close-icon');
-
-const hoverSign = document.querySelector('.hover-sign');
-
-//const videoList =[video1, video2, video3];
-const videoList = [video1, video2, video3].filter(Boolean);
-
-videoList.forEach(function(video) {
-    video.addEventListener("mouseover", function() {
-        video.play();
-        hoverSign.classList.add("active");
-    });
-    video.addEventListener("mouseout", function() {
-        video.pause();
-        hoverSign.classList.remove("active");
-    });
-});
-
-// Sidebar elements //
 menu.addEventListener("click", function() {
     sideBar.classList.remove("close-sidebar");
     sideBar.classList.add("open-sidebar");
