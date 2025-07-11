@@ -52,9 +52,28 @@ header{
     align-items: center;
 }
 
+.left .home-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.left .home-link:hover{
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
 .left img{
     width: 40px;
     margin: 0 15px;
+}
+
+.left h2{
+    margin: 0;
+    color: lightgray;
 }
 
 
@@ -380,22 +399,24 @@ header ul a:hover{
 .my-project{
     display: flex;
     flex-direction: column;
-    gap: 10%;
+    gap: 50px;
     align-items: center;
     position: relative;
     width: 80%;
-    height: 100vh;
+    height: auto;
     margin-top: 200px;
-    margin-bottom: 700px;
+    margin-bottom: 100px;
+    padding: 50px 0;
 }
 
 .project-card {
     display: flex;
     width: 100%;
-    height: 40%;
+    height: 400px;
     align-items: center;
     gap: 10%;
     justify-content: center;
+    margin-bottom: 30px;
 }
 
 .project-vidbox{
@@ -522,6 +543,8 @@ header ul a:hover{
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-top: 200px;
+    padding-top: 50px;
 }
 
 .skills-box{
@@ -954,7 +977,7 @@ header ul a:hover{
     }
 
     .my-project{
-        margin-bottom: 200px;
+        margin-bottom: 50px;
         scale: 0.8;
     }
 
@@ -1059,7 +1082,7 @@ header ul a:hover{
     }
 
     .my-project{
-        margin-bottom: 600px;
+        margin-bottom: 100px;
     }
 
     .project-card{
@@ -1199,6 +1222,12 @@ header ul a:hover{
     .skills-box{
         height: 120vh;
         margin-right: 30px;
+        margin-top: 100px;
+    }
+
+    .skills-section{
+        margin-top: 150px;
+        padding-top: 50px;
     }
 
     .slider{
