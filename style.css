@@ -19,6 +19,7 @@ html{
     align-items: center;
     gap: 100px;
     background-color: #001f7c38;
+    padding-top: 70px;
 }
 
 
@@ -33,7 +34,7 @@ html{
 
 header{
     display: flex;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     left: 0;
@@ -995,6 +996,7 @@ header ul a:hover{
 @media screen and (max-width: 700px){
     .container{
         gap: 50px;
+        padding-top: 50px;
     }
     
     header {
@@ -1159,6 +1161,7 @@ header ul a:hover{
 @media screen and (max-width: 480px) {
     .container{
         gap: 40px;
+        padding-top: 50px;
     }
     
     .hero .skills-video-box {
