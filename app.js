@@ -8,10 +8,23 @@ function isMobileDevice() {
            (window.innerWidth <= 768);
 }
 
+// Debounce function for resize events
+function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+        const later = () => {
+            clearTimeout(timeout);
+            func(...args);
+        };
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+    };
+}
+
 // Function to setup video behavior
 function setupVideoPlayback() {
     // Remove existing event listeners first
-    projectVideos.forEach(function(video, index) {
+    projectVideos.forEach(function(video) {
         video.removeEventListener("mouseover", video.playHandler);
         video.removeEventListener("mouseout", video.pauseHandler);
     });
@@ -20,7 +33,7 @@ function setupVideoPlayback() {
         // Mobile: Auto-play all project videos continuously
         projectVideos.forEach(function(video, index) {
             video.autoplay = true;
-            video.play();
+            video.play().catch(() => {}); // Catch any play errors
             // Show hover signs on mobile
             if (hoverSigns[index]) {
                 hoverSigns[index].classList.add("active");
@@ -31,7 +44,7 @@ function setupVideoPlayback() {
         projectVideos.forEach(function(video, index) {
             // Store handlers for later removal
             video.playHandler = function() {
-                video.play();
+                video.play().catch(() => {}); // Catch any play errors
                 if (hoverSigns[index]) {
                     hoverSigns[index].classList.add("active");
                 }
@@ -52,10 +65,8 @@ function setupVideoPlayback() {
 // Initialize video playback
 setupVideoPlayback();
 
-// Handle window resize to switch between mobile and desktop behavior
-window.addEventListener('resize', function() {
-    setupVideoPlayback();
-});
+// Handle window resize with debounce to improve performance
+window.addEventListener('resize', debounce(setupVideoPlayback, 250));
 
 // Sidebar elements //
 const sideBar = document.querySelector('.sidebar');
@@ -94,6 +105,36 @@ if (scrollDownBtn) {
         }
     });
 }
+
+// Boot animation - hide after animation completes and show main portfolio
+window.addEventListener('DOMContentLoaded', function() {
+    const bootScreen = document.querySelector('.boot-screen');
+    const mainPortfolio = document.getElementById('main-portfolio');
+    
+    // Initially hide main portfolio
+    if (mainPortfolio) {
+        mainPortfolio.style.display = 'none';
+    }
+    
+    // After animation completes, hide boot screen and show portfolio
+    setTimeout(function() {
+        if (bootScreen) {
+            // Use CSS transition for smooth fade
+            bootScreen.style.opacity = '0';
+            bootScreen.style.transition = 'opacity 0.5s ease';
+            
+            setTimeout(function() {
+                bootScreen.style.display = 'none';
+                // Remove from DOM to free memory
+                bootScreen.remove();
+                
+                if (mainPortfolio) {
+                    mainPortfolio.style.display = 'block';
+                }
+            }, 500);
+        }
+    }, 5500); // 5.5 seconds - right after PORTFOLIO disappears
+});
 
 // Social box logic
 document.addEventListener('DOMContentLoaded', function() {

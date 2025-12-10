@@ -1,3 +1,4 @@
+/* Portfolio Styles - Updated v1.1 */
 body{
     margin: 0;
     padding: 0;
@@ -287,7 +288,7 @@ header ul a:hover{
     align-items: center;
     flex-direction: column;
     width: 80%;
-    margin-top: 100px;
+    margin: 100px auto 0 auto;
 }
 
 .section-title{
@@ -411,8 +412,7 @@ header ul a:hover{
     position: relative;
     width: 80%;
     height: auto;
-    margin-top: 200px;
-    margin-bottom: 100px;
+    margin: 200px auto 100px auto;
     padding: 50px 0;
 }
 

@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="thumbnail.png">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="videos/galaxy.mp4" as="video" type="video/mp4">
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preload" href="boot-animation.css" as="style">
+    
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <!-- Open Graph (for chat/social preview) -->
@@ -20,7 +26,9 @@
     <meta name="twitter:image" content="https://morandini.online/thumbnail.png" />
 
     <title>Morandini Luigi</title>
+    <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="boot-animation.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
@@ -30,8 +38,133 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <video class="back-vid" autoplay loop muted plays-inline src="videos/galaxy.mp4"></video>
+    <!-- Boot Animation Screen -->
+    <div class="boot-screen">
+      <div class="screen">
+        <div class="content">
+          <p class="copyright">MORANDINI LUIGI</p>
+          <p class="branding">PORTFOLIO<span class="is-small">®</span>&nbsp;</p>
+        </div>
+        <div class="inner">
+          <div class="inner-bg"></div>
+          <div class="particles">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+          <div class="box-container"><div class="box"><div class="top"></div><div class="bottom"></div><div class="left"></div><div class="right"></div></div></div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main Portfolio Content -->
+    <div class="container" id="main-portfolio">
+        <video class="back-vid" autoplay loop muted playsinline preload="auto" src="videos/galaxy.mp4"></video>
 
         <header data-aos="fade-down" data-aos-duration="2000">
             <div class="left">
@@ -77,7 +210,7 @@
         </div>
 
         <div class="blackhole-box" data-aos="fade-down" data-aos-duration="2000">
-            <video autoplay loop muted plays-inline src="videos/blackhole.mp4"></video>
+            <video autoplay loop muted playsinline preload="auto" src="videos/blackhole.mp4"></video>
         </div>
 
         <section class="hero ">
@@ -97,7 +230,7 @@
             </div>
             
             <div class="skills-video-box " >
-                <video class="skills-video autoBlur" autoplay loop muted plays-inline src="videos/hero-video.mp4"></video>
+                <video class="skills-video autoBlur" autoplay loop muted playsinline preload="auto" src="videos/hero-video.mp4"></video>
             </div>
         
             <div class="scroll-down"></div>
@@ -122,7 +255,7 @@
                 <div class="card">
                     <h1>I’m very flexible with time zone communications & locations</h1>
                     <p>I'm based in Japan, Tokyo and open to remote work worldwide.</p>
-                    <video src="videos/glob.mp4" autoplay loop muted plays-inline></video>
+                    <video src="videos/glob.mp4" autoplay loop muted playsinline preload="auto"></video>
                     <a href="mailto:morandinilouis@gmail.com">
                         <button type="button"><i class='bx bx-send'></i> Contact Me</button>
                     </a>
@@ -143,7 +276,7 @@
             <div class="project-card">
                 <div class="project-vidbox autoBlur">
                     <a href="https://shibaangelclinic.vercel.app/" target="_blank">
-                        <video loop muted id="projectVideo8" src="videos/project8.mp4"></video>
+                        <video loop muted playsinline preload="metadata" loading="lazy" id="projectVideo8" src="videos/project8.mp4"></video>
                     </a>
                     <div class="hover-sign"></div>
                 </div>
@@ -159,7 +292,7 @@
             <div class="project-card">
                 <div class="project-vidbox autoBlur">
                     <a href="https://weather-2n2l.onrender.com//" target="_blank">
-                        <video loop muted id="projectVideo4" src="videos/project7.mp4"></video>
+                        <video loop muted playsinline preload="metadata" loading="lazy" id="projectVideo7" src="videos/project7.mp4"></video>
                     </a>
                     <div class="hover-sign"></div>
                 </div>
@@ -175,7 +308,7 @@
             <div class="project-card">
                 <div class="project-vidbox autoBlur">
                     <a href="https://threed-portfolio-g1jl.onrender.com/" target="_blank">
-                        <video loop muted id="projectVideo4" src="videos/project6.mp4"></video>
+                        <video loop muted playsinline preload="metadata" loading="lazy" id="projectVideo6" src="videos/project6.mp4"></video>
                     </a>
                     <div class="hover-sign"></div>
                 </div>
@@ -191,7 +324,7 @@
              <div class="project-card">
                 <div class="project-vidbox autoBlur">
                     <a href="https://gaming-50q0.onrender.com/" target="_blank">
-                        <video loop muted id="projectVideo4" src="videos/project4.mp4"></video>
+                        <video loop muted playsinline preload="metadata" loading="lazy" id="projectVideo4" src="videos/project4.mp4"></video>
                     </a>
                     <div class="hover-sign"></div>
                 </div>
@@ -207,7 +340,7 @@
             <div class="project-card">
                 <div class="project-vidbox autoBlur">
                     <a href="https://gaming-website-cqgx.onrender.com" target="_blank">
-                        <video loop muted id="projectVideo5" src="videos/project5.mp4"></video>
+                        <video loop muted playsinline preload="metadata" loading="lazy" id="projectVideo5" src="videos/project5.mp4"></video>
                     </a>
                     <div class="hover-sign"></div>
                 </div>
@@ -223,7 +356,7 @@
             <div class="project-card">
                 <div class="project-vidbox autoBlur" >
                     <a href="https://eventsjp.com/" target="_blank">
-                        <video loop muted id="projectVideo1" src="videos/project1.mp4"></video>
+                        <video loop muted playsinline preload="metadata" loading="lazy" id="projectVideo1" src="videos/project1.mp4"></video>
                     </a>
                     <div class="hover-sign"></div>
                 </div>
@@ -239,7 +372,7 @@
             <div class="project-card">
                 <div class="project-vidbox autoBlur">
                     <a href="https://gamefinder.online/" target="_blank">
-                        <video loop muted id="projectVideo_game" src="videos/project2.mp4"></video>
+                        <video loop muted playsinline preload="metadata" loading="lazy" id="projectVideo_game" src="videos/project2.mp4"></video>
                     </a>
                     <div class="hover-sign"></div>
                 </div>
@@ -255,7 +388,7 @@
             <div class="project-card">
                 <div class="project-vidbox autoBlur">
                     <a href="https://book-finder-app-1.onrender.com/" target="_blank">
-                        <video loop muted id="projectVideo3" src="videos/project3.mp4"></video>
+                        <video loop muted playsinline preload="metadata" loading="lazy" id="projectVideo3" src="videos/project3.mp4"></video>
                     </a>
                     <div class="hover-sign"></div>
                 </div>
@@ -352,10 +485,17 @@
         </section>
         
     </div>
-    <script src="app.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script >
-      AOS.init();
+    <script src="app.js" defer></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <script defer>
+      // Initialize AOS when DOM is ready
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+          AOS.init();
+        });
+      } else {
+        AOS.init();
+      }
     </script>
 </body>
 </html>
