@@ -679,6 +679,7 @@ header ul a:hover{
     gap: 10%;
     align-items: center;
     position: relative;
+    margin: 0 auto;
 }
 
 .contact-section h1{
@@ -1153,7 +1154,7 @@ header ul a:hover{
     }
 
     .social-box{
-        margin-left: -90px;
+        margin-left: 0;
     }
 }
 
