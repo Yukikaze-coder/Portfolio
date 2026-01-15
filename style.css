@@ -343,7 +343,7 @@ header ul a:hover{
 .card img{
     width: 80%;
     height: 50%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .card video{
